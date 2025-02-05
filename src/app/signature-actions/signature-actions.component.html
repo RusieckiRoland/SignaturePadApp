@@ -1,7 +1,13 @@
-<div class="button-container">
-    <button mat-raised-button color="primary">Podpisz</button>
-    <button mat-raised-button color="accent">Akceptuj</button>
-    <button mat-raised-button color="warn">Wyczyść</button>
-    <button mat-raised-button>Anuluj</button>
+<!-- app.component.html -->
+<mat-card class="signature-card">
+  <div class="canvas-container">
+    <canvas #signatureCanvas id="sigCanvas" width="640" height="320"></canvas>
   </div>
-  
+
+</mat-card>
+
+<!-- Buttons outside the card -->
+<div class="button-container">
+  <button mat-raised-button color="primary">Podpisz</button>
+  <button mat-raised-button color="accent">Zatwierdź</button>
+</div>

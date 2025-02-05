@@ -1,7 +1,92 @@
+/* app.component.scss */
+
+/* Make mat-card responsive and centered */
+.signature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px auto; /* Adds space around the card */
+  max-width: 90%;  /* Makes it responsive */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for nicer look */
+}
+
+/* Style the canvas */
+.canvas-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+canvas {
+  width: 100%; /* Make canvas take full width of container */
+  max-width: 640px;
+  height: auto; /* Ensure aspect ratio is maintained */
+  border: 1px solid #000;
+}
+
+/* Signature image container */
+.signature-img-container {
+  width: 100%;
+  max-width: 320px;
+  height: 160px;
+  border: 1px solid black;
+  margin-bottom: 20px;
+}
+
+/* Buttons positioned separately below the card */
 .button-container {
-    display: flex;
-    gap: 10px;  // Odstęp między przyciskami
-    justify-content: center;  // Wyśrodkowanie przycisków
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between the buttons */
+  margin-top: 20px;
+}
+
+/* Make everything responsive for smaller screens */
+@media (max-width: 768px) {
+  .signature-card {
+    max-width: 100%;
+  }
+
+  .canvas-container {
+    width: 100%;
+  }
+
+  .signature-img-container {
+    width: 100%;
+    height: auto;
+  }
+  .signature-card {
+    padding: 16px;
+    margin-bottom: 16px;
   }
   
+  .canvas-container {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .mat-primary {
+    background-color: #4caf50 !important;  // Kolor dla sukcesu (zielony)
+    color: white !important;
+  }
+  
+  .mat-warn {
+    background-color: #ff9800 !important;  // Kolor dla ostrzeżenia (pomarańczowy)
+    color: white !important;
+  }
+  
+  .mat-accent {
+    background-color: #f44336 !important;  // Kolor dla błędu (czerwony)
+    color: white !important;
+  }
+  
+
+}
